@@ -14,11 +14,11 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputAlcool: '',
-      inputGasolina: '',
-      alcool: '',
-      gasolina: '',
-      resultado: '',
+      inputAlcool: 0,
+      inputGasolina: 0,
+      alcool: 0,
+      gasolina: 0,
+      resultado: 0,
       modalVisible: false
     };
 
@@ -27,10 +27,6 @@ export default class App extends Component {
   }
 
   calcular() {
-    // // if (this.state.resultado === '') {
-    //   return 'Coloque os valore!';
-    // }
-
     this.setState({
       modalVisible: true,
       alcool: this.state.inputAlcool,
@@ -40,7 +36,7 @@ export default class App extends Component {
   }
 
   calcularNovamente(visible) {
-    this.setState({ modalVisible: visible })
+    this.setState({ modalVisible: visible, inputAlcool: 0, inputGasolina: 0 })
   }
 
   render() {
