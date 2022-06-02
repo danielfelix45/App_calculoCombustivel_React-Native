@@ -36,7 +36,7 @@ export default class App extends Component {
   }
 
   calcularNovamente(visible) {
-    this.setState({ modalVisible: visible, inputAlcool: 0, inputGasolina: 0 })
+    this.setState({ modalVisible: visible })
   }
 
   render() {
